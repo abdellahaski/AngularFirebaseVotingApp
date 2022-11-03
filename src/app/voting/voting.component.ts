@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { map } from 'rxjs';
 import { CandidatesService } from '../services/candidates.service';
 import { Candidate } from '../models/candidate.model';
 import { VotesService } from '../services/votes.service';
@@ -17,15 +17,7 @@ export class VotingComponent implements OnInit {
   candidates!: any[];
   groupedCandidates: Candidate[][] = [];
   groupedVotedCandidates: number[] = [];;
-  votedGroups: number[] = [];
   votesCount: number=0;
-  public candidatestoshow: any;
-  public rows!: Observable<any[]>;
-  private currentVoteID: any;
-  primes!: number[];
-  items: any;
-  totalVoteData: any;
-  downloadJsonHref: any;
   candidatesCount: number = 0;
 
 
@@ -74,13 +66,11 @@ export class VotingComponent implements OnInit {
     if(this.groupedVotedCandidates[candidate.group] == undefined)
     {
       this.groupedVotedCandidates[candidate.group] = candidate.candidateID;
-      //candidate.votes++;
+      //candidate.votes++;//not needed since the votes are updated in realtime once changed on the firestore DB
       this.candidatesService.addVote(candidate);
       this.voteService.vote(candidate.candidateID);
     }
-
     this.localStorageService.saveData('groupedVotedCandidates',JSON.stringify(this.groupedVotedCandidates));
-    
   }
 
   getCandidateClass(group: number, id: number) {
