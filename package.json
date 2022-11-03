@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "ng build --configuration production --aot & cd C:\\Users\\Abdellah\\Workspaces\\Abdellah-ASKI_FirebaseHosting\\public\\AngularFirebaseVotingApp & rm -r * & XCOPY C:\\Users\\Abdellah\\Workspaces\\AngularFirebaseVotingApp\\dist\\angular-firebase-voting-app\\* . /s /e /y & cd ../.. & firebase deploy --only hosting"
   },
   "private": true,
   "dependencies": {
@@ -14,10 +15,14 @@
     "@angular/common": "^14.2.0",
     "@angular/compiler": "^14.2.0",
     "@angular/core": "^14.2.0",
+    "@angular/fire": "^7.4.1",
     "@angular/forms": "^14.2.0",
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+    "bootstrap": "^5.2.2",
+    "crypto-js": "^4.1.1",
+    "firebase": "^9.13.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -26,6 +31,7 @@
     "@angular-devkit/build-angular": "^14.2.7",
     "@angular/cli": "~14.2.7",
     "@angular/compiler-cli": "^14.2.0",
+    "@types/crypto-js": "^4.1.1",
     "@types/jasmine": "~4.0.0",
     "jasmine-core": "~4.3.0",
     "karma": "~6.4.0",

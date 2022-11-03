@@ -1,0 +1,153 @@
+
+
+.placeholder {
+  display: none;
+}
+
+.container {
+  margin: auto;
+  text-align: center;
+  padding-top: 4px;
+  
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    li {
+      padding: 20px;
+
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        box-shadow: 0 3px 4px 1px rgba(0, 0, 0, 0.1);
+        filter: grayscale(0.5);
+        border: 4px solid rgb(255 0 0);
+        cursor: pointer;
+
+        &.elect {
+          border: 3px solid rgb(255 0 0);
+          box-shadow: 0 4px 7px 1px rgba(0, 0, 0, 0.1);
+          filter: grayscale(0);
+          cursor: default;
+        }
+
+        &.lost {
+          box-shadow: unset;
+          border: 4px solid rgba(0, 0, 0, 0.1);
+
+          &:hover {
+            filter: grayscale(0.5);
+            cursor: default;
+          }
+        }
+
+        &:hover {
+          filter: grayscale(0);
+        }
+      }
+
+      h4 {
+        font-size: 16px;
+        opacity: 0.9;
+        margin-bottom: 8px;
+        font-weight: lighter;
+      }
+
+      p {
+        font-size: 14px;
+        opacity: 0.6;
+        font-weight: bold;
+        margin: 4px 0;
+      }
+    }
+  }
+}
+
+.chart-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.CircleContainer {
+  height: 75px;
+}
+
+.loading-frame {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  left: 50%;
+}
+
+.circle {
+  position: absolute;
+  height: 13px;
+  width: 13px;
+  border-radius: 13px;
+  background-color: #f30000;
+  animation: animate linear 2s infinite;
+}
+
+.circle:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.circle:nth-child(2) {
+  animation-delay: 0.7s;
+  transform: translate(0px, 15px);
+}
+
+.circle:nth-child(3) {
+  animation-delay: 0.9s;
+  transform: translate(0px, 30px);
+}
+
+.circle:nth-child(4) {
+  animation-delay: 0.9s;
+  transform: translate(-20px, 30px);
+}
+
+.circle:nth-child(5) {
+  animation-delay: 0.9s;
+  transform: translate(20px, 30px);
+}
+
+.circle:nth-child(6) {
+  animation-delay: 1.1s;
+  transform: translate(10px, 45px);
+}
+
+.circle:nth-child(7) {
+  animation-delay: 1.1s;
+  transform: translate(-10px, 45px);
+}
+
+.circle:nth-child(8) {
+  animation-delay: 1.3s;
+  transform: translate(0px, 60px);
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    background-color: #f30000;
+  }
+  50% {
+    background-color: #000;
+  }
+}
+
+.card-header {
+    border-bottom-color:rgb(251 0 0 / 44%) !important;
+  }
+
+  p.lead{
+  color: #fbca3f;
+}

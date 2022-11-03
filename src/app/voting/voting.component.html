@@ -1,0 +1,57 @@
+<div class="bd-cheatsheet container bootstrap-dark text-white">
+  <div class="py-4 text-center header bg-dark">
+    <img
+      class="d-block mx-auto mb-4"
+      src="./assets/angularfire.png"
+      alt=""
+      width="72"
+    />
+    <h2>Angular FireStore Voting App</h2>
+    <p class="lead">
+      Below is an example Voting app built entirely with <b>Angular</b> and Firebase
+      <b>Firestore</b> "realtime" database.
+    </p>
+  </div>
+  <div class="py-3 text-center">
+    <h2>VOTING</h2>
+    <p *ngIf="candidatesCount||votesCount">
+    <span *ngIf="candidatesCount">{{ candidatesCount }} Candidates </span>|
+    <span *ngIf="votesCount">{{ votesCount }} Total votes</span>
+  </p>
+  </div>
+  <div class="py-1 text-center">
+    <h3>Who's going to be the star of the show !? 🤩🤔🏆</h3>
+    <h4>VOTE NOW and be the judge 📲🤓</h4>
+  </div>
+  <div class="CircleContainer">
+    <ul class="loading-frame">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </ul>
+  </div>
+
+
+<div class="row">
+  <div class="col-md-3 mx-auto group card text-white bg-dark my-3" *ngFor="let group of groups" style="max-width: 54rem;">
+    <div class="card-header ">Group {{ group }}</div>
+    <div class="card-body pb-1">
+      <ul class="mb-1">
+        <div clas="candidate"  *ngFor="let candidate of groupedCandidates[group]">
+          <li>
+            <img (click)="vote(candidate)" [src]="candidate.img" [alt]="candidate.name" [ngClass]="getCandidateClass(group,candidate.candidateID)" />
+            <h4 class="card-title mt-2">{{candidate.name}}</h4>
+            <h5>{{candidate.votes}} votes</h5>
+            
+          </li>
+        </div>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
