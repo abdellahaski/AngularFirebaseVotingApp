@@ -2,10 +2,12 @@
 <p align="center">
   <img width="505" height="auto" src="https://i.imgur.com/lRohjYR.png">
 </p>
-This project was first created in 2019 as a part of an Android Application (unofficial app for a comedy competition TV Show). This project was integrated into the app and allowed users to vote for the elected candidates.
 
-It was first built on Angular V8 and later upgraded to the latest (as of 2022) Angular V14 version.
-The project uses the magic of Firebase Firestore to show/cast votes in realtime across all connected users.
+This project was first created in 2019, as a part of an Android Application (an unofficial app for a comedy competition TV Show), and allowed users of the Android app to vote for the elected candidates/contestants in realtime.
+
+It was first built on Angular V8 and later upgraded to the latest (as of 2022) **Angular V14**.
+
+The project uses the magic of Firebase **Firestore** to show/cast votes in realtime across all connected users.
 
 Live demo: https://abdellah-aski.web.app/AngularFirebaseVotingApp/
 
