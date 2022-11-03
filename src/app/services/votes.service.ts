@@ -21,18 +21,18 @@ export class VotesService {
     return this.voteRef;
   }
   getVotesCount(): Observable<number> {
-    return this.voteRef.snapshotChanges().pipe(map(c=>{return c.length}));
-    
+    return this.voteRef.snapshotChanges().pipe(map(c => { return c.length }));
+
   }
 
   addVote(vote: Vote): void {
-    this.voteRef.add({...vote});
+    this.voteRef.add({ ...vote });
   }
-  vote(candidateID: number): void {
 
+  vote(candidateID: number): void {
     try {
       this.ipGeoLocationService.getIP().subscribe((IPData: any) => {
-        const vote:Vote = {
+        const vote: Vote = {
           candidate: candidateID,
           timestamp: new Date(),
           ip: IPData.ip_address,
@@ -42,7 +42,7 @@ export class VotesService {
         this.addVote(vote);
       });
     } catch (e) {
-      const vote:Vote = {
+      const vote: Vote = {
         candidate: candidateID,
         timestamp: new Date(),
         city: 'unknown',
@@ -51,9 +51,6 @@ export class VotesService {
       };
       this.addVote(vote);
     }
-    
-    
   }
-
-
+  
 }
