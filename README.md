@@ -11,6 +11,8 @@ The project uses the magic of Firebase **Firestore** to show/cast votes in realt
 
 Live demo: https://abdellah-aski.web.app/AngularFirebaseVotingApp/
 
+<sub>Old live demo of the TV show voting app: https://app.standupma.com/vote/</sub>
+
 (the Live demo is currently hosted on Firebase Hosting service)
 
 ![](https://i.imgur.com/o4Ow96o.gif)
