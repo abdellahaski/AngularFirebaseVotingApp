@@ -10,6 +10,7 @@ It was first built on Angular V8 and later upgraded to the latest (as of 2022) *
 The project uses the magic of Firebase **Firestore** to show/cast votes in realtime across all connected users.
 
 Live demo: https://abdellah-aski.web.app/AngularFirebaseVotingApp/
+
 (the Live demo is currently hosted on Firebase Hosting service)
 
 ![](https://i.imgur.com/o4Ow96o.gif)
