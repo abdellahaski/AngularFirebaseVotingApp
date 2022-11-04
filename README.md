@@ -5,7 +5,7 @@
 
 This project was first created in 2019, as a part of an Android Application (an unofficial app for a comedy competition TV Show), and allowed users of the Android app to vote for the elected candidates/contestants in realtime.
 
-It was first built on Angular V8 and later upgraded to the latest (as of 2022) **Angular V14**.
+It was first built on Angular V8 and later **rebuilt** from scratch on the latest (as of 2022) **Angular V14**.
 
 The project uses the magic of Firebase **Firestore** to show/cast votes in realtime across all connected users.
 
